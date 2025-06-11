@@ -57,12 +57,11 @@ public class AppTest extends BasePage {
             //Screenshot login
             String loginScreenshot = ScreenshotClass.captureScreenshot(driver, "LoginCaptura");
             loginPage.clickBtnLogin();
-            System.out.println("SUCCESSFUL LOGIN");
-            // Esperar que el dashboard cargue completamente, usando un elemento clave -
+            // Esperar que el dashboard cargue completamente, usando un elemento clave
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='oxd-layout-context']")));
             //Validar login verificando que es redirigido al dashboard
-            Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "Error: You have not been redirected to the dashboard");
+            Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "Error: No has sido redireccionado  al dashboard");
             test.pass("Login con usuario Admin exitoso").addScreenCaptureFromPath(loginScreenshot);
 
 
@@ -91,7 +90,6 @@ public class AppTest extends BasePage {
             loginPage.inputPassword(properties.getProperty("pim.password"));
             String userLoginSS = ScreenshotClass.captureScreenshot(driver, "LoginUsuarioCaptura");
             loginPage.clickBtnLogin();
-            System.out.println("SUCCESSFUL LOGIN");
             // Nueva espera explícita
             WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
             wait.until(ExpectedConditions.urlContains("dashboard"));
@@ -113,7 +111,6 @@ public class AppTest extends BasePage {
             loginPage.inputUsername(properties.getProperty("loginPage.username"));
             loginPage.inputPassword(properties.getProperty("loginPage.password"));
             loginPage.clickBtnLogin();
-            System.out.println("SUCCESSFUL LOGIN");
             // Esperar que el dashboard cargue completamente, usando un elemento clave -
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='oxd-layout-context']")));
             //Validar login verificando que es redirigido al dashboard
@@ -136,7 +133,6 @@ public class AppTest extends BasePage {
             loginPage.inputUsername(properties.getProperty("pim.username"));
             loginPage.inputPassword(properties.getProperty("pim.password"));
             loginPage.clickBtnLogin();
-            System.out.println("SUCCESSFUL LOGIN");
             // Esperar que el dashboard cargue completamente, usando un elemento clave -
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='oxd-layout-context']")));
             //Validar login verificando que es redirigido al dashboard

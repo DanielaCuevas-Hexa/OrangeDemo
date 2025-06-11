@@ -44,7 +44,7 @@ public class BasePage {
         }
     }
 
-    //Para el escenario de search, para esperar elementos
+    //Para esperar elementos
     public void waitForElementToBeVisible(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
@@ -52,7 +52,7 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    //Metodos de interaccion
+    //Metodos de input o para interactuar
     public void clickElement(By locator) {
         waitForElementToBeClickable(locator);
         driver.findElement(locator).click();
