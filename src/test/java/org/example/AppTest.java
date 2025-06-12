@@ -35,6 +35,7 @@ public class AppTest extends BasePage {
         extent = ReportsManager.getInstance();
         //Iniciar firefox
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         //Inicializar loginPage
         loginPage = new Login(driver);
         //Cargar propiedades de config.properties
