@@ -14,7 +14,7 @@ public class BasePage {
     //Constructor
     public BasePage() {
         //Inicializar browser firefox
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
     }
 
     //Constructor para herencia
