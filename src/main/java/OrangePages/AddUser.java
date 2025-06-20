@@ -18,13 +18,12 @@ public class AddUser extends BasePage{
     private By lastNameF = By.xpath("//input[@name='lastName']");
     private By employeeId = By.xpath("//label[text()='Employee Id']/following::input[1]");
 
-    //Create Login Details (properties)
+    //Create Login Details
     private By loginDetailsBtn = By.xpath("//span[contains(@class,'oxd-switch-input')]");
     private By loginUsername = By.xpath("(//input[@class='oxd-input oxd-input--active'])[3]");
     private By loginPassword = By.xpath("(//input[@type='password'])[1]");
     private By confirmPassword = By.xpath("(//input[@type='password'])[2]");
     private By saveBtn = By.xpath("//button[@type='submit']");
-    private By formLoader = By.className("oxd-form-loader");//Loader que bloquea el boton save
 
     private WebDriver driver;
     private WebDriverWait wait;
